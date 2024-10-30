@@ -55,6 +55,7 @@ class ArticleAdapter(private val context: Context, private val articles: List<Ar
         override fun onClick(v: View?) {
             // Get selected article
 
+
             //  Navigate to Details screen and pass selected article
         }
     }
