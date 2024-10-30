@@ -24,9 +24,9 @@ class ArticleAdapter(private val context: Context, private val articles: List<Ar
     }
 
     override fun onBindViewHolder(holder: ArticleAdapter.ViewHolder, position: Int) {
-        // TODO: Get the individual article and bind to holder
-        val article = articles[position]
-        holder.bind(article)
+        // Get the individual article and bind to holder
+            val article = articles[position]
+            holder.bind(article)
 
     }
 
@@ -43,7 +43,7 @@ class ArticleAdapter(private val context: Context, private val articles: List<Ar
             itemView.setOnClickListener(this)
         }
 
-        // TODO: Write a helper method to help set up the onBindViewHolder method
+        // Write a helper method to help set up the onBindViewHolder method
         fun bind(article: Article){
             titleTextView.text = article.headline?.main
             abstractTextView.text = article.abstract
@@ -53,12 +53,9 @@ class ArticleAdapter(private val context: Context, private val articles: List<Ar
                 .into(mediaImageView)
         }
         override fun onClick(v: View?) {
-            // TODO: Get selected article
-            val article = articles[absoluteAdapterPosition]
-            // TODO: Navigate to Details screen and pass selected article
-            val intent = Intent(context, DetailActivity::class.java)
-            intent.putExtra(ARTICLE_EXTRA, article)
-            context.startActivity(intent)
+            // Get selected article
+
+            //  Navigate to Details screen and pass selected article
         }
     }
 }
